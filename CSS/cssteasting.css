@@ -1,0 +1,38 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.input-container {
+    position: relative;
+    margin: 20px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    transition: border-bottom-color 0.3s;
+  }
+  
+  label {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    transition: top 0.3s, font-size 0.3s;
+  }
+  
+  input:focus + label, input:valid + label {
+    top: 0;
+    font-size: 12px;
+  }
+  
