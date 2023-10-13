@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Character Input</title>
+    <link rel="stylesheet" href="jspractice.js"> 
+    <style>
+    </style>
+</head>
+<body>
+    <h2>Q1</h2>
+    <script src="jspractice.js"></script>
+    <input type="text" id="charInput" placeholder="Enter a character">
+    <button onclick="chhotiyan()">Output</button>
+    <p id="result"></p>
+    <!-- ************** -->
+    <h2>Q2</h2>
+    <input type="number" id="firstNo" placeholder="First Number">
+    <input type="number" id="secNo" placeholder="Second Number">
+    <button onclick="add()">Addition</button>
+    <p id="resultSum"></p>
+    <script>
+        function add() {
+            var firstNumber = parseFloat(document.getElementById("firstNo").value);
+            var secondNumber = parseFloat(document.getElementById("secNo").value);
+            var sum = firstNumber + secondNumber;
+            document.getElementById("resultSum").innerText = "sum: "+ sum;
+            console.log(sum);
+        }
+    </script>
+    <!-- ************** -->
+    <h2>Q3</h2>
+    <input type="number" id="principal" placeholder="Enter principal amount">
+    <input type="number" id="year" placeholder="No. of years">
+    <input type="number" id="rate" placeholder="Rate of interest">
+    <button onclick="si()">Simple Interest</button>
+    <p id="resultInterest"></p>
+    <script>
+        function si() {
+            var firstNumber = parseFloat(document.getElementById("principal").value);
+            var secondNumber = parseFloat(document.getElementById("year").value);
+            var thirdNumber = parseFloat(document.getElementById("rate").value);
+            var simpleInterest = firstNumber * secondNumber * thirdNumber / 100 ;
+            document.getElementById("resultInterest").innerText = "S.I. : "+ simpleInterest;
+            console.log(simpleInterest);
+        }
+    </script>
+        <!-- ************** -->
+        <h2>Q4</h2>
+        <input type="number" id="mark" placeholder="Enter your mark">
+        <button onclick="score()">Submit</button>
+        <script>
+                function score() {
+                    var marksObtained= parseFloat(document.getElementById("mark").value);
+                    if ( marksObtained >= 40) {
+                        alert("Passed");
+                    }
+                    else {
+                        alert("Failed");
+                    }
+                }
+        </script>
+<h2>JavaScript For Loop</h2>
+
+<p id="demo"></p>
+
+<script>
+const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+let text = "";
+for (let i = 0; i < cars.length; i++) {
+  text += cars[i] + "<br>";
+}
+console.log(cars.length);
+document.getElementById("demo").innerHTML = text;
+</script>
+
+
+
+
+
+</body>
+</html>

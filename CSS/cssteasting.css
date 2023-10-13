@@ -1,4 +1,4 @@
-* {
+/* * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
@@ -29,10 +29,27 @@ body {
     top: 20px;
     left: 0;
     transition: top 0.3s, font-size 0.3s;
-  }
-  
+  }  
   input:focus + label, input:valid + label {
     top: 0;
     font-size: 12px;
-  }
+  } */
+  .fixed-div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Set a fixed height for the fixed div */
+    background-color: #f0f0f0;
+    z-index: 2; /* Higher z-index to keep it on top */
+}
+.positioned-div {
+    position: absolute;
+    top: 100px; /* Position it below the fixed div */
+    left: 0;
+    width: 100%;
+    height: 200px; /* Set the height as needed */
+    background-color: #ccc;
+    z-index: 1; /* Lower z-index to stack it below the fixed div */
+}
   
